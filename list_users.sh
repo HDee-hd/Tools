@@ -39,8 +39,14 @@ function list_users_with_read_access {
         echo "$collaborators"
     fi
 }
-
+function helper {
+    expected_input_args=2
+    if [ $# -ne $expected_input_args ]; then
+        echo "Usage: $0 <repo_owner> <repo_name>"
+        exit 1
+}
 # Main script
 
 echo "Listing users with read access to ${REPO_OWNER}/${REPO_NAME}..."
 list_users_with_read_access
+helper
