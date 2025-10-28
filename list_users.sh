@@ -4,6 +4,9 @@
 # Author: Abishek
 
 ####################################
+
+helper()
+
 # GitHub API URL
 API_URL="https://api.github.com"
 
@@ -49,4 +52,3 @@ function helper {
 
 echo "Listing users with read access to ${REPO_OWNER}/${REPO_NAME}..."
 list_users_with_read_access
-helper
